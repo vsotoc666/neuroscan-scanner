@@ -1,0 +1,23 @@
+# Servicio systemd para arrancar el lanzador del lector OMR al encender la placa.
+# Instalación:
+#   sudo cp deploy/omr-launcher.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now omr-launcher
+# Ajusta User y las rutas si tu usuario o carpeta son distintos.
+
+[Unit]
+Description=Lector OMR - lanzador (espera boton OK)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/omr/firmware/rpi-zero2w
+EnvironmentFile=-/home/pi/omr/firmware/rpi-zero2w/.env
+ExecStart=/usr/bin/python3 launcher.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

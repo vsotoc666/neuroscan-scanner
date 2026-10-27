@@ -1,0 +1,6 @@
+# En Raspberry Pi OS se recomienda instalar OpenCV y Pillow con apt:
+#   sudo apt install python3-opencv python3-pil fonts-dejavu
+# y el resto con pip:
+adafruit-blinka
+adafruit-circuitpython-rgb-display
+requests
