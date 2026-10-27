@@ -1,8 +1,10 @@
-# Lector OMR autónomo con calificación por IA
+# NeuroScan – Scanner
 
-Lector de fichas ópticas (OMR, *Optical Mark Recognition*) de bajo costo. Detecta por sí solo cuando se coloca una ficha de examen, la fotografía, la envía por API a un servidor donde una IA la corrige, y muestra la nota en una pequeña pantalla TFT. Toda la interfaz se maneja con 4 botones y está organizada como una **máquina de estados**.
+Escáner del proyecto **NeuroScan**: un lector de fichas ópticas (OMR, *Optical Mark Recognition*) de bajo costo. Detecta por sí solo cuando se coloca una ficha de examen, la fotografía, la envía por API a un servidor donde una IA la corrige, y muestra la nota en una pequeña pantalla TFT. Toda la interfaz se maneja con 4 botones y está organizada como una **máquina de estados**.
 
 Proyecto del curso **BMA20**.
+
+> **Nota:** este repositorio contiene solo el **dispositivo escáner** (la SBC con cámara, sensor, pantalla y botones). El servidor de IA que corrige las fichas forma parte de NeuroScan, pero está en un repositorio aparte. El formato de comunicación entre ambos está en [docs/ARQUITECTURA.md](docs/ARQUITECTURA.md#comunicación-con-el-servidor-de-ia).
 
 ```mermaid
 flowchart LR
